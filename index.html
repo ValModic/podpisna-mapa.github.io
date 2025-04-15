@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podpisna mapa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Podpisna mapa</h1>
+    <div class="navigation">
+      <button onclick="showMain()">Glavni pogled</button>
+      <button onclick="showHelp()">Pomoč</button>
+    </div>
+
+    <div id="main-view">
+      <h2>Dokumenti</h2>
+      <div id="document-list">
+        <!-- Dokumenti bodo dinamično dodani tukaj -->
+      </div>
+      <div id="document-details" style="display:none;">
+        <h3>Podrobnosti dokumenta</h3>
+        <p id="doc-name"></p>
+        <p id="doc-status"></p>
+        <textarea placeholder="Opombe..."></textarea><br>
+        <button onclick="signDocument()">Podpiši</button>
+        <button onclick="rejectDocument()">Zavrni</button>
+      </div>
+    </div>
+
+    <div id="help-view" style="display:none;">
+      <h2>Pomoč</h2>
+      <ul>
+        <li>Preglej seznam dokumentov in klikni na enega za podpis ali zavrnitev.</li>
+        <li>Uporabi gumbe za filtriranje ali nalaganje.</li>
+        <li>Ob zavrnitvi vnesi razlog.</li>
+        <li>Za digitalni podpis mora biti nameščen ProxSign.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
